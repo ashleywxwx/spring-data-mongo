@@ -2,33 +2,26 @@ package com.recursivechaos.boredgames.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class Game extends ResourceSupport {
+public class Game {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long uid;
+    private long id;
 
     private String title;
     private String description;
 
-    @JsonCreator
-    public Game(@JsonProperty("title") String title, @JsonProperty("description") String description) {
-        this.title = title;
-        this.description = description;
-    }
+//    @JsonCreator
+//    public Game(@JsonProperty("title") String title, @JsonProperty("description") String description) {
+//        this.title = title;
+//        this.description = description;
+//    }
 
     public Game(){}
 
-    public long getUid() {
-        return uid;
+    public long getId() {
+        return id;
     }
 
     public String getTitle() {

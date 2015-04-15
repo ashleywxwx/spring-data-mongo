@@ -1,12 +1,12 @@
 package com.recursivechaos.boredgames.repository;
 
 import com.recursivechaos.boredgames.domain.Game;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface GameRepository extends PagingAndSortingRepository<Game, Long> {
+public interface GameRepository extends MongoRepository<Game, Long> {
 
     List<Game> findByTitle(@Param("title") String title);
 
