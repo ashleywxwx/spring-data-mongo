@@ -7,20 +7,14 @@ import org.springframework.data.annotation.Id;
 public class Game {
 
     @Id
-    private long id;
+    private String id;
 
     private String title;
     private String description;
 
-//    @JsonCreator
-//    public Game(@JsonProperty("title") String title, @JsonProperty("description") String description) {
-//        this.title = title;
-//        this.description = description;
-//    }
-
     public Game(){}
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
