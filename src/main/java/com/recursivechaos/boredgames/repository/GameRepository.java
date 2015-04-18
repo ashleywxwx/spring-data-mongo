@@ -6,7 +6,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface GameRepository extends MongoRepository<Game, Long> {
+public interface GameRepository extends MongoRepository<Game, String> {
 
     List<Game> findByTitle(@Param("title") String title);
 
