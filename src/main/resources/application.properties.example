@@ -1,0 +1,3 @@
+db.mongo.username=username
+db.mongo.password=password
+db.mongo.url=localhost
