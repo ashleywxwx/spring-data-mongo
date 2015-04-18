@@ -12,6 +12,10 @@ public class Game {
     public Game() {
     }
 
+    public Game(String id){
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }
